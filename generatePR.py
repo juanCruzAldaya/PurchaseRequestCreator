@@ -55,7 +55,7 @@ actions = ActionChains(driver)
 
 timeOut = 40
 
-workbook = load_workbook(filename = "PRSinHacerFS.xlsx") ###
+workbook = load_workbook(filename = "############################################################") ###
 sheet = workbook.active
 max_row = sheet.max_row
 i = 1
@@ -74,7 +74,7 @@ for row in sheet.iter_rows(min_row=2, min_col=1, max_row=max_row, max_col=1):
             print ("SAP failed, run script again...")
 
         
-        driver.get("https://s1.ariba.com/Buyer/Main/aw?awh=r&awssk=5Z3OrytN1OHAwAhu&realm=accenture&awrdt=1") 
+        driver.get("#################################################.com") 
         os.system("cls")
         for cell in row:
             cellRow = str(cell.row)
@@ -117,7 +117,7 @@ for row in sheet.iter_rows(min_row=2, min_col=1, max_row=max_row, max_col=1):
                 WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/table/tbody/tr/td/div/div[2]/div/table[1]/tbody/tr/td[1]/table[1]/tbody/tr[3]/td[3]/div/div/span/div[1]/div[1]/input')))
                 inNameOf = driver.find_element(By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/table/tbody/tr/td/div/div[2]/div/table[1]/tbody/tr/td[1]/table[1]/tbody/tr[3]/td[3]/div/div/span/div[1]/div[1]/input')
                 inNameOf.clear()
-                inNameOf.send_keys("Andres J. Renteria")
+                inNameOf.send_keys("##### name ####")
 
             except TimeoutException:
                 print ("SAP failed, run script again...")
@@ -128,7 +128,7 @@ for row in sheet.iter_rows(min_row=2, min_col=1, max_row=max_row, max_col=1):
                 WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/table/tbody/tr/td/div/div[2]/div/table[1]/tbody/tr/td[1]/table[1]/tbody/tr[4]/td[3]/div/div/span/div[1]/div[1]/input')))
                 companyCode = driver.find_element(By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/table/tbody/tr/td/div/div[2]/div/table[1]/tbody/tr/td[1]/table[1]/tbody/tr[4]/td[3]/div/div/span/div[1]/div[1]/input')
                 companyCode.clear()
-                companyCode.send_keys("1300")
+                companyCode.send_keys("####")
                 
             except TimeoutException:
                 print ("SAP failed, run script again...")
@@ -138,7 +138,7 @@ for row in sheet.iter_rows(min_row=2, min_col=1, max_row=max_row, max_col=1):
                 WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/table/tbody/tr/td/div/div[2]/div/table[1]/tbody/tr/td[1]/table[1]/tbody/tr[7]/td[3]/table/tbody/tr/td[1]/div/div/span/div[1]/div[1]/input')))
                 businessApprover = driver.find_element(By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/table/tbody/tr/td/div/div[2]/div/table[1]/tbody/tr/td[1]/table[1]/tbody/tr[7]/td[3]/table/tbody/tr/td[1]/div/div/span/div[1]/div[1]/input')
                 businessApprover.clear()
-                businessApprover.send_keys("Facundo N.  Petit")
+                businessApprover.send_keys("####")
             except TimeoutException:
                 print ("SAP failed, run script again...")
 
@@ -190,7 +190,7 @@ for row in sheet.iter_rows(min_row=2, min_col=1, max_row=max_row, max_col=1):
                 WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[1]/table/tbody/tr[2]/td[3]/div/div/span/div[1]/div[1]/input')))
                 organizationCode = driver.find_element(By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[1]/table/tbody/tr[2]/td[3]/div/div/span/div[1]/div[1]/input')
                 organizationCode.clear()
-                organizationCode.send_keys("1300")
+                organizationCode.send_keys("############")
 
             except TimeoutException:
                 print ("SAP failed, run script again...")
@@ -335,7 +335,7 @@ for row in sheet.iter_rows(min_row=2, min_col=1, max_row=max_row, max_col=1):
                     WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[14]/td[3]/div/div/span/div[1]/div[1]/input')))
                     organizationCode = driver.find_element(By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[14]/td[3]/div/div/span/div[1]/div[1]/input')
                     organizationCode.clear()
-                    organizationCode.send_keys("1300")
+                    organizationCode.send_keys("############")
 
                 except TimeoutException:
                     print ("SAP failed, run script again...")
@@ -345,7 +345,7 @@ for row in sheet.iter_rows(min_row=2, min_col=1, max_row=max_row, max_col=1):
                     WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[15]/td[3]/div/div/span/div[1]/div[1]/input')))
                     organizationCode = driver.find_element(By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[15]/td[3]/div/div/span/div[1]/div[1]/input')
                     organizationCode.clear()
-                    organizationCode.send_keys("1300")
+                    organizationCode.send_keys("############")
 
                 except TimeoutException:
                     print ("SAP failed, run script again...")
@@ -354,7 +354,7 @@ for row in sheet.iter_rows(min_row=2, min_col=1, max_row=max_row, max_col=1):
                 WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/div[4]/table[2]/tbody/tr[2]/td[3]/table/tbody/tr/td[1]/div/div/span/div[1]/div[1]/input')))
                 organizationCode = driver.find_element(By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/div[4]/table[2]/tbody/tr[2]/td[3]/table/tbody/tr/td[1]/div/div/span/div[1]/div[1]/input')
                 organizationCode.clear()
-                organizationCode.send_keys("B6C0R001")
+                organizationCode.send_keys("############")
 
             except TimeoutException:
                 print ("SAP failed, run script again...")
@@ -378,7 +378,7 @@ for row in sheet.iter_rows(min_row=2, min_col=1, max_row=max_row, max_col=1):
                 WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/table/tbody/tr/td/div/div[2]/div/table[1]/tbody/tr/td[1]/table[1]/tbody/tr[5]/td[3]/table/tbody/tr/td[1]/div/div/span/div[1]/div[1]/input')))
                 organizationCode = driver.find_element(By.XPATH, '/html/body/div[5]/form/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/table/tbody/tr[3]/td/div/div/div[1]/table/tbody/tr/td/div/div[2]/div/table[1]/tbody/tr/td[1]/table[1]/tbody/tr[5]/td[3]/table/tbody/tr/td[1]/div/div/span/div[1]/div[1]/input')
                 organizationCode.clear()
-                organizationCode.send_keys("Leandro M. Garibaldi")
+                organizationCode.send_keys("####################################")
                 time.sleep(1)
 
             except TimeoutException:

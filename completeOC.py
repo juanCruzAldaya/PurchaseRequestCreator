@@ -79,7 +79,7 @@ max_row = sheet.max_row
 
 i = 2
 
-driver.get("https://s1.ariba.com/Buyer/Main/aw?awh=r&awssk=Be2NoZxjNEANOO0p&realm=accenture&awrdt=1")
+driver.get("################################################")
 try: 
     WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[1]/td/table/tbody/tr[3]/td/table/tbody/tr/td[1]/div/div/ul/span[1]/li/span/a')))
     inicioButton = driver.find_element(By.XPATH, '/html/body/div[5]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[1]/td/table/tbody/tr[3]/td/table/tbody/tr/td[1]/div/div/ul/span[1]/li/span/a')
@@ -104,26 +104,6 @@ try:
     ocButton.click()
 except TimeoutException:
     print ("SAP failed, run script again...")
-
-
-
-print("1st flag")
-# try: 
-#     WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td[2]/div/div/table/tbody/tr[3]/td[2]/div/div/form/table/tbody/tr[1]/td/div[1]/table[2]/tbody/tr[1]/td[3]/div/table[2]/tbody/tr[20]/td[2]/a[2]')))
-#     responsibleButton = driver.find_element(By.XPATH, '/html/body/div[5]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td[2]/div/div/table/tbody/tr[3]/td[2]/div/div/form/table/tbody/tr[1]/td/div[1]/table[2]/tbody/tr[1]/td[3]/div/table[2]/tbody/tr[20]/td[2]/a[2]')
-#     responsibleButton.click()
-# except TimeoutException:
-#     print ("SAP failed, run script again...")
-
-
-# try: 
-#     WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td[2]/div/div/table/tbody/tr[3]/td[2]/div/div/form/div[2]/div/a[2]')))
-#     suprButton = driver.find_element(By.XPATH, '/html/body/div[5]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td[2]/div/div/table/tbody/tr[3]/td[2]/div/div/form/div[2]/div/a[2]')
-#     suprButton.click()
-# except TimeoutException:
-#     print ("SAP failed, run script again...")
-# time.sleep(1)
-
 
 
 try: 
@@ -174,20 +154,6 @@ try:
     something = searchButton.text
 except TimeoutException:
     print ("SAP failed, run script again...")
-# time.sleep(234)
-# cantPedidos = 0
-# try: 
-#     WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td[2]/div/div/table/tbody/tr[3]/td[2]/div/div/form/table/tbody/tr[2]/td/div[1]/table/tbody/tr[1]/td/table/tbody/tr/td/table/tbody/tr/td[4]/table/tbody/tr/td[1]/span/a/div')))
-#     optionsButton = driver.find_element(By.XPATH, '/html/body/div[5]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td[2]/div/div/table/tbody/tr[3]/td[2]/div/div/form/table/tbody/tr[2]/td/div[1]/table/tbody/tr[1]/td/table/tbody/tr/td/table/tbody/tr/td[4]/table/tbody/tr/td[1]/span/a/div')
-#     optionsButton.click()
-# except TimeoutException:
-#     print ("SAP failed, run script again...")
-# try: 
-#     WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td[2]/div/div/table/tbody/tr[3]/td[2]/div/div/form/div[2]/div/a[6]')))
-#     stateButton = driver.find_element(By.XPATH, '/html/body/div[5]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td[2]/div/div/table/tbody/tr[3]/td[2]/div/div/form/div[2]/div/a[6]')
-#     stateButton.click()
-# except TimeoutException:
-#     print ("SAP failed, run script again...")
 
 time.sleep(2)
 while True:
@@ -213,7 +179,7 @@ while True:
             time.sleep(1)
             
             sheet["C"+str(rowNumber)] = ocValue
-            workbook.save("PRPedidos.xlsx")
+            workbook.save("############")
 
             time.sleep(1)
             ocField.click()
@@ -231,7 +197,7 @@ while True:
                 ocDateField = driver.find_element(By.XPATH, '/html/body/div[5]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[2]/td/table/tbody/tr/td[2]/div/div/div/form/table[1]/tbody/tr[4]/td/div/div[2]/div/div[1]/table/tbody/tr[2]/td/table/tbody/tr[2]/td/div/table/tbody/tr[2]/td[1]/span/table/tbody/tr/td')
                 ocDate = ocDateField.text
                 sheet["D"+str(rowNumber)] = str(convert_date_with_map(str(ocDate)))
-                workbook.save("PRPedidos.xlsx")
+                workbook.save("############")
             except TimeoutException:
                 print ("SAP failed, run script again...")
 
@@ -254,7 +220,7 @@ while True:
             except TimeoutException:
                 print ("SAP failed, run script again...")
             time.sleep(1)
-            driver.get("https://s1.ariba.com/Buyer/Main/aw?awh=r&awssk=fUTAYGPh6MBQGtBI&realm=accenture&dard=1#b0")
+            driver.get("####################################")
             try: 
                 WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[5]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[1]/td/table/tbody/tr[3]/td/table/tbody/tr/td[1]/div/div/ul/span[1]/li/span/a')))
                 inicioButton = driver.find_element(By.XPATH, '/html/body/div[5]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[1]/td/table/tbody/tr[3]/td/table/tbody/tr/td[1]/div/div/ul/span[1]/li/span/a')
